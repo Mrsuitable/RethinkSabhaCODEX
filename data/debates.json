@@ -1,0 +1,82 @@
+[
+  {
+    "id": "future-of-nuclear-energy-india",
+    "title": "Should India accelerate nuclear energy expansion?",
+    "summary": "Debate energy security, climate commitments, and the economics of scaling nuclear plants over the next decade.",
+    "category": "Energy Policy",
+    "status": "Open",
+    "level": "Intermediate",
+    "date": "2026-05-04",
+    "durationMinutes": 45
+  },
+  {
+    "id": "ai-and-school-education",
+    "title": "Should AI tools be mandatory in high school classrooms?",
+    "summary": "Explore learning outcomes, equity gaps, critical thinking risks, and teacher workload impacts.",
+    "category": "Education",
+    "status": "Open",
+    "level": "Beginner",
+    "date": "2026-05-07",
+    "durationMinutes": 40
+  },
+  {
+    "id": "social-media-regulation",
+    "title": "Do stronger social media regulations protect democracy?",
+    "summary": "Compare free speech concerns with misinformation control and election integrity safeguards.",
+    "category": "Civics",
+    "status": "Open",
+    "level": "Advanced",
+    "date": "2026-05-10",
+    "durationMinutes": 50
+  },
+  {
+    "id": "remote-work-and-cities",
+    "title": "Will remote work permanently change Indian cities?",
+    "summary": "Analyze transport pressure, real estate, migration trends, and quality-of-life tradeoffs.",
+    "category": "Economy",
+    "status": "Upcoming",
+    "level": "Intermediate",
+    "date": "2026-05-13",
+    "durationMinutes": 45
+  },
+  {
+    "id": "upi-global-expansion",
+    "title": "Can UPI become a truly global payment standard?",
+    "summary": "Debate policy coordination, fraud risks, fintech competitiveness, and cross-border adoption barriers.",
+    "category": "Technology",
+    "status": "Open",
+    "level": "Intermediate",
+    "date": "2026-05-16",
+    "durationMinutes": 45
+  },
+  {
+    "id": "climate-adaptation-priority",
+    "title": "Should climate adaptation get more funding than mitigation?",
+    "summary": "Discuss immediate resilience needs versus long-term emissions reduction strategy and fairness.",
+    "category": "Environment",
+    "status": "Open",
+    "level": "Advanced",
+    "date": "2026-05-19",
+    "durationMinutes": 50
+  },
+  {
+    "id": "sports-in-school-policy",
+    "title": "Should schools treat sports as core academics?",
+    "summary": "Examine health, discipline, scholarship outcomes, and curriculum balance for modern schools.",
+    "category": "Education",
+    "status": "Upcoming",
+    "level": "Beginner",
+    "date": "2026-05-23",
+    "durationMinutes": 35
+  },
+  {
+    "id": "digital-privacy-law",
+    "title": "Is India ready for stricter consumer data privacy enforcement?",
+    "summary": "Evaluate startup costs, trust gains, compliance realities, and global standards alignment.",
+    "category": "Civics",
+    "status": "Open",
+    "level": "Advanced",
+    "date": "2026-05-27",
+    "durationMinutes": 55
+  }
+]

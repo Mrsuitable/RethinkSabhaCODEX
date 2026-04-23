@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rethink Sabha | Structured Debate Platform</title>
+    <meta
+      name="description"
+      content="Rethink Sabha helps students and young professionals practice structured debates with research-focused modules and moderated sessions."
+    />
+    <link rel="canonical" href="https://yourdomain.com/" />
+    <meta property="og:title" content="Rethink Sabha | Structured Debate Platform" />
+    <meta
+      property="og:description"
+      content="Train your debate skills with guided modules, upcoming sessions, and practical argument frameworks."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://yourdomain.com/" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="theme-color" content="#0f766e" />
+    <link rel="manifest" href="manifest.webmanifest" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/site.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Rethink Sabha",
+        "url": "https://yourdomain.com/",
+        "description": "Structured debate learning platform with guided sessions and AI-assisted preparation."
+      }
+    </script>
+  </head>
+  <body data-page="home">
+    <header class="header">
+      <div class="container header-row">
+        <a class="brand" href="index.html">
+          <span class="brand-mark">RS</span>
+          <span>Rethink Sabha</span>
+        </a>
+        <button class="button button-secondary nav-toggle" id="menuToggle" type="button">Menu</button>
+        <nav class="nav-links" id="navLinks" aria-label="Main Navigation">
+          <a class="nav-link" data-page="home" href="index.html">Home</a>
+          <a class="nav-link" data-page="debates" href="debates.html">Debates</a>
+          <a class="nav-link" data-page="learn" href="learn.html">Learn</a>
+          <a class="nav-link" data-page="about" href="about.html">About</a>
+          <a class="button button-primary" href="debates.html">Join a Session</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container hero-grid">
+          <article class="hero-card">
+            <span class="kicker">Debate with evidence, not noise</span>
+            <h1>Build argument skills that actually improve your thinking.</h1>
+            <p>
+              Rethink Sabha is designed for learners who want practical, moderated 1-on-1 debates.
+              We combine research discipline, structure, and delivery training in one place.
+            </p>
+            <div class="hero-actions">
+              <a class="button button-primary" href="debates.html">Browse Open Debates</a>
+              <a class="button button-secondary" href="learn.html">Try AI Debate Coach</a>
+            </div>
+            <div class="stats">
+              <div class="stat">
+                <strong>8+</strong>
+                <span>Weekly debate topics</span>
+              </div>
+              <div class="stat">
+                <strong>45 min</strong>
+                <span>Average session length</span>
+              </div>
+              <div class="stat">
+                <strong>3-step</strong>
+                <span>Research -> Plan -> Deliver</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="hero-card">
+            <h2>What makes this different?</h2>
+            <p>
+              Most platforms reward speed and hot takes. This one rewards clarity, logic, evidence, and
+              respectful disagreement.
+            </p>
+            <div class="space-12">
+              <div class="feature">
+                <h3>Research-first debates</h3>
+                <p>Every session starts with clear claims, evidence quality checks, and source confidence.</p>
+              </div>
+              <div class="feature space-12">
+                <h3>Moderated speaking format</h3>
+                <p>Balanced speaking turns and rebuttals prevent shouting matches and force structured thinking.</p>
+              </div>
+              <div class="feature space-12">
+                <h3>Post-debate reflection</h3>
+                <p>You leave each session with feedback on logic, delivery, and weak assumptions.</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="section-head">
+            <h2>Featured Debates</h2>
+            <p>Live and upcoming sessions with focused topics for school, policy, and society.</p>
+          </div>
+          <div class="debates" id="homeDebates"></div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="section-head">
+            <h2>Core Training Modules</h2>
+            <p>A repeatable workflow so your debate quality improves every week.</p>
+          </div>
+          <div class="grid-3">
+            <article class="feature">
+              <h3>1. Research</h3>
+              <p>Build source credibility, detect bias, and extract usable evidence fast.</p>
+            </article>
+            <article class="feature">
+              <h3>2. Plan</h3>
+              <p>Design opening statements, rebuttal flow, and tight closing arguments.</p>
+            </article>
+            <article class="feature">
+              <h3>3. Deliver</h3>
+              <p>Improve tone, confidence, and concise framing under real-time pressure.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-grid">
+        <p class="small">Rethink Sabha. Evidence-led debate practice for students and young professionals.</p>
+        <p class="small">Copyright <span id="year"></span> Rethink Sabha</p>
+      </div>
+    </footer>
+
+    <div class="modal-wrap" id="registerModal" aria-hidden="true">
+      <div class="modal" role="dialog" aria-modal="true" aria-labelledby="registerTitle">
+        <div class="modal-top">
+          <h3 id="registerTitle">Register for Debate</h3>
+          <button id="closeModal" class="icon-button" type="button" aria-label="Close">X</button>
+        </div>
+        <p class="small space-12">Selected: <strong id="selectedDebateName">-</strong></p>
+        <form id="registerForm" class="space-12">
+          <label class="small" for="fullName">Full Name</label>
+          <input id="fullName" name="fullName" type="text" required />
+          <label class="small space-12" for="email">Email</label>
+          <input id="email" name="email" type="email" required />
+          <label class="small space-12" for="intent">Why do you want to join?</label>
+          <textarea id="intent" name="intent" rows="3" required></textarea>
+          <div id="registerMessage" class="notice info hide"></div>
+          <div id="registerError" class="notice error hide"></div>
+          <div class="card-actions space-12">
+            <button class="button button-primary" type="submit">Submit Registration</button>
+            <button class="button button-secondary" type="button" id="cancelModal">Cancel</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script src="assets/js/config.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>

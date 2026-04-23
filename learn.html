@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Learn | Rethink Sabha</title>
+    <meta
+      name="description"
+      content="Practice debate fundamentals with research, planning, and delivery modules plus AI-assisted coaching."
+    />
+    <link rel="canonical" href="https://yourdomain.com/learn.html" />
+    <meta property="og:title" content="Learn | Rethink Sabha" />
+    <meta
+      property="og:description"
+      content="Use the Rethink Sabha learning system to prepare stronger claims and rebuttals for real debates."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://yourdomain.com/learn.html" />
+    <meta name="theme-color" content="#0f766e" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/site.css" />
+  </head>
+  <body data-page="learn">
+    <header class="header">
+      <div class="container header-row">
+        <a class="brand" href="index.html">
+          <span class="brand-mark">RS</span>
+          <span>Rethink Sabha</span>
+        </a>
+        <button class="button button-secondary nav-toggle" id="menuToggle" type="button">Menu</button>
+        <nav class="nav-links" id="navLinks" aria-label="Main Navigation">
+          <a class="nav-link" data-page="home" href="index.html">Home</a>
+          <a class="nav-link" data-page="debates" href="debates.html">Debates</a>
+          <a class="nav-link" data-page="learn" href="learn.html">Learn</a>
+          <a class="nav-link" data-page="about" href="about.html">About</a>
+          <a class="button button-primary" href="debates.html">Join Debate</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container hero-card">
+          <span class="kicker">Learning System</span>
+          <h1>Train the full debate loop: research, planning, and delivery.</h1>
+          <p>
+            This page gives you a structured prep workflow and an AI coach entry point. Keep your arguments
+            evidence-backed and easy to rebut under pressure.
+          </p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="grid-3">
+            <article class="feature">
+              <h3>Research</h3>
+              <p>Find two supporting sources and one opposing source before building your opening statement.</p>
+            </article>
+            <article class="feature">
+              <h3>Planning</h3>
+              <p>Map your argument chain: claim -> evidence -> impact. Keep each chain under 25 seconds.</p>
+            </article>
+            <article class="feature">
+              <h3>Delivery</h3>
+              <p>Use pauses, clear signposting, and direct responses to rebuttals instead of repeating points.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container coach-panel">
+          <h2>AI Debate Coach</h2>
+          <p>
+            Enter your topic and get a draft argument structure. Connect your own API endpoint in
+            <code>assets/js/config.js</code> for live AI responses.
+          </p>
+          <form id="coachForm" class="form-grid">
+            <input
+              id="topic"
+              name="topic"
+              type="text"
+              placeholder="Example: Should AI be mandatory in classrooms?"
+              required
+            />
+            <select id="stanceMode" name="stanceMode" aria-label="Stance mode">
+              <option value="both">FOR + AGAINST</option>
+              <option value="for">FOR only</option>
+              <option value="against">AGAINST only</option>
+            </select>
+            <button class="button button-primary" type="submit">
+              <span id="coachSubmitText">Get Coaching</span>
+            </button>
+          </form>
+          <div id="coachNotice" class="notice info hide"></div>
+          <div id="coachError" class="notice error hide"></div>
+          <pre id="coachResult" class="result hide"></pre>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-grid">
+        <p class="small">Use this coach as a prep accelerator, then validate claims with real sources.</p>
+        <p class="small">Copyright <span id="year"></span> Rethink Sabha</p>
+      </div>
+    </footer>
+
+    <script src="assets/js/config.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/coach.js"></script>
+  </body>
+</html>
