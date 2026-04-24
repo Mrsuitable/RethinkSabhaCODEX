@@ -227,9 +227,41 @@
     throw lastError || new Error("No AI response was returned.");
   }
 
+  async function callPollinationsCoach(topicValue, modeValue) {
+    const prompt = buildPrompt(topicValue, modeValue);
+    const url = `https://text.pollinations.ai/${encodeURIComponent(prompt)}?seed=${Date.now()}`;
+    const response = await fetch(url);
+
+    if (!response.ok) {
+      throw new Error("Pollinations AI did not return success.");
+    }
+
+    const answer = (await response.text()).trim();
+    if (!answer) {
+      throw new Error("Pollinations AI returned an empty response.");
+    }
+
+    return answer;
+  }
+
+  async function callPublicAiCoach(topicValue, modeValue) {
+    const providers = [callPollinationsCoach, callPuterCoach];
+    let lastError;
+
+    for (const provider of providers) {
+      try {
+        return await provider(topicValue, modeValue);
+      } catch (error) {
+        lastError = error;
+      }
+    }
+
+    throw lastError || new Error("Public AI providers were unavailable.");
+  }
+
   async function callCoachApi(topicValue, modeValue) {
     if (!config.aiEndpoint) {
-      return callPuterCoach(topicValue, modeValue);
+      return callPublicAiCoach(topicValue, modeValue);
     }
 
     const response = await fetch(config.aiEndpoint, {
@@ -286,12 +318,12 @@
       const answer = await callCoachApi(topicValue, modeValue);
       renderResult(answer);
       if (!config.aiEndpoint) {
-        showInfo("Generated with no-key browser AI. A private backend can be connected later.");
+        showInfo("Generated with public no-key AI.");
       }
     } catch (requestError) {
       if (!config.aiEndpoint) {
         renderResult(buildFallback(topicValue, modeValue));
-        showInfo("Live AI could not respond, so the built-in coach generated this prep sheet.");
+        showInfo("Public AI was busy, so the built-in coach generated this prep sheet.");
       } else {
         showError(requestError.message || "Unable to generate coaching right now.");
       }
