@@ -92,11 +92,17 @@
       })
     });
 
-    if (!response.ok) {
-      throw new Error("Coach API did not return success.");
+    let payload = {};
+    try {
+      payload = await response.json();
+    } catch {
+      throw new Error("Coach API returned an invalid response.");
     }
 
-    const payload = await response.json();
+    if (!response.ok) {
+      throw new Error(payload?.error || "Coach API did not return success.");
+    }
+
     if (!payload || typeof payload.answer !== "string") {
       throw new Error("Coach API returned an unexpected response.");
     }

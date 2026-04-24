@@ -1,0 +1,7 @@
+name = "rethink-sabha-ai"
+main = "src/index.js"
+compatibility_date = "2026-04-24"
+
+[vars]
+ALLOWED_ORIGIN = "https://mrsuitable.github.io"
+GEMINI_MODEL = "gemini-2.0-flash"

@@ -9,6 +9,7 @@ This rebuild is a static multi-page website designed to deploy directly from Git
 - Debate directory powered by `data/debates.json`
 - Registration modal with local save + optional API forwarding
 - AI coach UI with optional API endpoint integration
+- Secure AI backend template: `backend/cloudflare-worker`
 - GitHub Pages CI/CD workflow: `.github/workflows/pages.yml`
 
 ## Publish from your GitHub
@@ -33,8 +34,21 @@ This rebuild is a static multi-page website designed to deploy directly from Git
    - `aiEndpoint`: server endpoint for AI coach response
    - `registrationEndpoint`: optional endpoint for storing registrations
 
+## Make AI coach actually live (recommended)
+
+Use the Cloudflare Worker backend included in:
+
+- `backend/cloudflare-worker`
+- guide: `backend/cloudflare-worker/README.md`
+
+Quick path:
+
+1. Deploy worker with your Gemini key as `GEMINI_API_KEY`.
+2. Copy worker URL and set `aiEndpoint` in `assets/js/config.js` to:
+   - `https://<your-worker>.workers.dev/coach`
+3. Push to GitHub again.
+
 ## Important security note
 
 Do not place secret API keys in frontend files.  
 Keep AI keys on your server/API endpoint and call that endpoint from this site.
-
